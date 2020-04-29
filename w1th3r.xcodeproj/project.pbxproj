@@ -20,8 +20,12 @@
 		8213362A2401487D00D85845 /* IOAccelerator_stuff.c in Sources */ = {isa = PBXBuildFile; fileRef = 821336212401487C00D85845 /* IOAccelerator_stuff.c */; };
 		8213362B2401487D00D85845 /* offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 821336272401487C00D85845 /* offsets.m */; };
 		8213362D2401488D00D85845 /* exploit.c in Sources */ = {isa = PBXBuildFile; fileRef = 8213362C2401488D00D85845 /* exploit.c */; };
-		82133630240148C800D85845 /* IOKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8213362F240148C700D85845 /* IOKit.tbd */; };
 		82133633240149DD00D85845 /* IOSurface_stuff.c in Sources */ = {isa = PBXBuildFile; fileRef = 82133632240149DD00D85845 /* IOSurface_stuff.c */; };
+		C823F9CE245A1665009D86B3 /* FdHijacker.m in Sources */ = {isa = PBXBuildFile; fileRef = C823F9CC245A1665009D86B3 /* FdHijacker.m */; };
+		C823F9D0245A1A81009D86B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C823F9CF245A1A81009D86B3 /* CoreGraphics.framework */; };
+		C823F9D2245A1A8A009D86B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C823F9D1245A1A8A009D86B3 /* Foundation.framework */; };
+		C823F9D4245A1B16009D86B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C823F9D3245A1B16009D86B3 /* UIKit.framework */; };
+		C823F9D8245A1C97009D86B3 /* IOKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8213362F240148C700D85845 /* IOKit.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,12 @@
 		8213362F240148C700D85845 /* IOKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = IOKit.tbd; path = w1th3r/IOKit/IOKit.tbd; sourceTree = "<group>"; };
 		82133631240149DD00D85845 /* IOSurface_stuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOSurface_stuff.h; sourceTree = "<group>"; };
 		82133632240149DD00D85845 /* IOSurface_stuff.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = IOSurface_stuff.c; sourceTree = "<group>"; };
+		C823F9CC245A1665009D86B3 /* FdHijacker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FdHijacker.m; sourceTree = "<group>"; };
+		C823F9CD245A1665009D86B3 /* FdHijacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FdHijacker.h; sourceTree = "<group>"; };
+		C823F9CF245A1A81009D86B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C823F9D1245A1A8A009D86B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C823F9D3245A1B16009D86B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C823F9D6245A1C6E009D86B3 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +88,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82133630240148C800D85845 /* IOKit.tbd in Frameworks */,
+				C823F9D0245A1A81009D86B3 /* CoreGraphics.framework in Frameworks */,
+				C823F9D8245A1C97009D86B3 /* IOKit.tbd in Frameworks */,
+				C823F9D4245A1B16009D86B3 /* UIKit.framework in Frameworks */,
+				C823F9D2245A1A8A009D86B3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +136,8 @@
 		821335E92401480500D85845 /* w1th3r */ = {
 			isa = PBXGroup;
 			children = (
+				C823F9CD245A1665009D86B3 /* FdHijacker.h */,
+				C823F9CC245A1665009D86B3 /* FdHijacker.m */,
 				821335EA2401480500D85845 /* AppDelegate.h */,
 				821335EB2401480500D85845 /* AppDelegate.m */,
 				821335F02401480500D85845 /* ViewController.h */,
@@ -169,6 +184,10 @@
 		8213362E240148C700D85845 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C823F9D6245A1C6E009D86B3 /* IOSurface.framework */,
+				C823F9D3245A1B16009D86B3 /* UIKit.framework */,
+				C823F9D1245A1A8A009D86B3 /* Foundation.framework */,
+				C823F9CF245A1A81009D86B3 /* CoreGraphics.framework */,
 				8213362F240148C700D85845 /* IOKit.tbd */,
 			);
 			name = Frameworks;
@@ -312,6 +331,7 @@
 				8213362A2401487D00D85845 /* IOAccelerator_stuff.c in Sources */,
 				8213362B2401487D00D85845 /* offsets.m in Sources */,
 				821335FD2401480600D85845 /* main.m in Sources */,
+				C823F9CE245A1665009D86B3 /* FdHijacker.m in Sources */,
 				8213362D2401488D00D85845 /* exploit.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
