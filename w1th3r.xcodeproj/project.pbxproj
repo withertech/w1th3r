@@ -80,7 +80,6 @@
 		C823F9CF245A1A81009D86B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C823F9D1245A1A8A009D86B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C823F9D3245A1B16009D86B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		C823F9D6245A1C6E009D86B3 /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/Frameworks/IOSurface.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,7 +183,6 @@
 		8213362E240148C700D85845 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C823F9D6245A1C6E009D86B3 /* IOSurface.framework */,
 				C823F9D3245A1B16009D86B3 /* UIKit.framework */,
 				C823F9D1245A1A8A009D86B3 /* Foundation.framework */,
 				C823F9CF245A1A81009D86B3 /* CoreGraphics.framework */,
