@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#define LOG_LEVEL_DEF ddLogLevel
+#import <CocoaLumberjack/CocoaLumberjack.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
