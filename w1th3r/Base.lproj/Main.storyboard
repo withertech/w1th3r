@@ -30,7 +30,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="Jailbreak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lJ5-NT-uBW"/>
+                                    <action selector="Jailbreak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ag-nf-LRA"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="e2I-Vb-5mI">
@@ -54,7 +54,7 @@
                         <viewLayoutGuide key="safeArea" id="SW0-dj-e4q"/>
                     </view>
                     <connections>
-                        <outlet property="textView" destination="e2I-Vb-5mI" id="7ZO-Mx-0um"/>
+                        <outlet property="textView" destination="e2I-Vb-5mI" id="d8F-zv-Opp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

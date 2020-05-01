@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
 #import "exploit.h"
 #import "UITextViewLogger.h"
-#import <CocoaLumberjack/DDTTYLogger.h>
 #import "ViewController.h"
 static const DDLogLevel ddLogLevel = DDLogLevelAll;
 @interface AppDelegate ()
@@ -26,7 +25,6 @@ static const DDLogLevel ddLogLevel = DDLogLevelAll;
     [DDLog addLogger:textViewLogger];
     ViewController *viewController = [ViewController alloc];
     textViewLogger.textView = viewController.textView;
-    DDLogInfo(@"test");
     return YES;
 }
 

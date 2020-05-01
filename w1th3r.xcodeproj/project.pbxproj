@@ -20,13 +20,13 @@
 		821336292401487D00D85845 /* exploit_utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 821336202401487C00D85845 /* exploit_utilities.c */; };
 		8213362A2401487D00D85845 /* IOAccelerator_stuff.c in Sources */ = {isa = PBXBuildFile; fileRef = 821336212401487C00D85845 /* IOAccelerator_stuff.c */; };
 		8213362B2401487D00D85845 /* offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 821336272401487C00D85845 /* offsets.m */; };
-		8213362D2401488D00D85845 /* exploit.c in Sources */ = {isa = PBXBuildFile; fileRef = 8213362C2401488D00D85845 /* exploit.c */; };
+		8213362D2401488D00D85845 /* exploit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8213362C2401488D00D85845 /* exploit.m */; };
 		82133633240149DD00D85845 /* IOSurface_stuff.c in Sources */ = {isa = PBXBuildFile; fileRef = 82133632240149DD00D85845 /* IOSurface_stuff.c */; };
-		C823F9D0245A1A81009D86B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C823F9CF245A1A81009D86B3 /* CoreGraphics.framework */; };
-		C823F9D2245A1A8A009D86B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C823F9D1245A1A8A009D86B3 /* Foundation.framework */; };
-		C823F9D4245A1B16009D86B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C823F9D3245A1B16009D86B3 /* UIKit.framework */; };
 		C823F9D8245A1C97009D86B3 /* IOKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8213362F240148C700D85845 /* IOKit.tbd */; };
 		C8679CB1245B645D00215EFF /* UITextViewLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C8679CB0245B645D00215EFF /* UITextViewLogger.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		C8D5C8C9245BB74400E54CCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D5C8C8245BB74400E54CCA /* Foundation.framework */; };
+		C8D5C8CB245BB74E00E54CCA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D5C8CA245BB74E00E54CCA /* UIKit.framework */; };
+		C8D5C8CD245BB79200E54CCA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D5C8CC245BB79200E54CCA /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,15 +74,16 @@
 		821336252401487C00D85845 /* exploit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exploit.h; sourceTree = "<group>"; };
 		821336262401487C00D85845 /* exploit_utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exploit_utilities.h; sourceTree = "<group>"; };
 		821336272401487C00D85845 /* offsets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = offsets.m; sourceTree = "<group>"; };
-		8213362C2401488D00D85845 /* exploit.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = exploit.c; sourceTree = "<group>"; };
+		8213362C2401488D00D85845 /* exploit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = exploit.m; sourceTree = "<group>"; };
 		8213362F240148C700D85845 /* IOKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = IOKit.tbd; path = w1th3r/IOKit/IOKit.tbd; sourceTree = "<group>"; };
 		82133631240149DD00D85845 /* IOSurface_stuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOSurface_stuff.h; sourceTree = "<group>"; };
 		82133632240149DD00D85845 /* IOSurface_stuff.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = IOSurface_stuff.c; sourceTree = "<group>"; };
-		C823F9CF245A1A81009D86B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		C823F9D1245A1A8A009D86B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C823F9D3245A1B16009D86B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C8679CAF245B63F200215EFF /* UITextViewLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextViewLogger.h; sourceTree = "<group>"; };
 		C8679CB0245B645D00215EFF /* UITextViewLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextViewLogger.m; sourceTree = "<group>"; };
+		C8D5C8C8245BB74400E54CCA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C8D5C8CA245BB74E00E54CCA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C8D5C8CC245BB79200E54CCA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C8D5C8CE245BB9F200E54CCA /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DAAA1BB60BC5A9D4484B1D97 /* libPods-w1th3r.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-w1th3r.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -91,10 +92,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C823F9D0245A1A81009D86B3 /* CoreGraphics.framework in Frameworks */,
 				C823F9D8245A1C97009D86B3 /* IOKit.tbd in Frameworks */,
-				C823F9D4245A1B16009D86B3 /* UIKit.framework in Frameworks */,
-				C823F9D2245A1A8A009D86B3 /* Foundation.framework in Frameworks */,
+				C8D5C8CB245BB74E00E54CCA /* UIKit.framework in Frameworks */,
+				C8D5C8C9245BB74400E54CCA /* Foundation.framework in Frameworks */,
+				C8D5C8CD245BB79200E54CCA /* CoreGraphics.framework in Frameworks */,
 				3FE12AF31275DB89A1885F1F /* libPods-w1th3r.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,6 +129,7 @@
 		821335DE2401480400D85845 = {
 			isa = PBXGroup;
 			children = (
+				C8D5C8CE245BB9F200E54CCA /* .gitignore */,
 				821335E92401480500D85845 /* w1th3r */,
 				821336052401480600D85845 /* w1th3rTests */,
 				821336102401480600D85845 /* w1th3rUITests */,
@@ -156,7 +158,7 @@
 				821335F12401480500D85845 /* ViewController.m */,
 				821336202401487C00D85845 /* exploit_utilities.c */,
 				821336262401487C00D85845 /* exploit_utilities.h */,
-				8213362C2401488D00D85845 /* exploit.c */,
+				8213362C2401488D00D85845 /* exploit.m */,
 				821336252401487C00D85845 /* exploit.h */,
 				82133631240149DD00D85845 /* IOSurface_stuff.h */,
 				82133632240149DD00D85845 /* IOSurface_stuff.c */,
@@ -198,9 +200,9 @@
 		8213362E240148C700D85845 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C823F9D3245A1B16009D86B3 /* UIKit.framework */,
-				C823F9D1245A1A8A009D86B3 /* Foundation.framework */,
-				C823F9CF245A1A81009D86B3 /* CoreGraphics.framework */,
+				C8D5C8CC245BB79200E54CCA /* CoreGraphics.framework */,
+				C8D5C8CA245BB74E00E54CCA /* UIKit.framework */,
+				C8D5C8C8245BB74400E54CCA /* Foundation.framework */,
 				8213362F240148C700D85845 /* IOKit.tbd */,
 				DAAA1BB60BC5A9D4484B1D97 /* libPods-w1th3r.a */,
 			);
@@ -371,7 +373,7 @@
 				8213362A2401487D00D85845 /* IOAccelerator_stuff.c in Sources */,
 				8213362B2401487D00D85845 /* offsets.m in Sources */,
 				821335FD2401480600D85845 /* main.m in Sources */,
-				8213362D2401488D00D85845 /* exploit.c in Sources */,
+				8213362D2401488D00D85845 /* exploit.m in Sources */,
 				C8679CB1245B645D00215EFF /* UITextViewLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
