@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <Foundation/Foundation.h>
 @interface ViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 
 @end

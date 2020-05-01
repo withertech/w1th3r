@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FE12AF31275DB89A1885F1F /* libPods-w1th3r.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAA1BB60BC5A9D4484B1D97 /* libPods-w1th3r.a */; };
 		821335EC2401480500D85845 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 821335EB2401480500D85845 /* AppDelegate.m */; };
 		821335F22401480500D85845 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821335F12401480500D85845 /* ViewController.m */; };
 		821335F52401480500D85845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821335F32401480500D85845 /* Main.storyboard */; };
@@ -21,11 +22,11 @@
 		8213362B2401487D00D85845 /* offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 821336272401487C00D85845 /* offsets.m */; };
 		8213362D2401488D00D85845 /* exploit.c in Sources */ = {isa = PBXBuildFile; fileRef = 8213362C2401488D00D85845 /* exploit.c */; };
 		82133633240149DD00D85845 /* IOSurface_stuff.c in Sources */ = {isa = PBXBuildFile; fileRef = 82133632240149DD00D85845 /* IOSurface_stuff.c */; };
-		C823F9CE245A1665009D86B3 /* FdHijacker.m in Sources */ = {isa = PBXBuildFile; fileRef = C823F9CC245A1665009D86B3 /* FdHijacker.m */; };
 		C823F9D0245A1A81009D86B3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C823F9CF245A1A81009D86B3 /* CoreGraphics.framework */; };
 		C823F9D2245A1A8A009D86B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C823F9D1245A1A8A009D86B3 /* Foundation.framework */; };
 		C823F9D4245A1B16009D86B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C823F9D3245A1B16009D86B3 /* UIKit.framework */; };
 		C823F9D8245A1C97009D86B3 /* IOKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8213362F240148C700D85845 /* IOKit.tbd */; };
+		C8679CB1245B645D00215EFF /* UITextViewLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C8679CB0245B645D00215EFF /* UITextViewLogger.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34841FCCF59A8FFDA5B56D5B /* Pods-w1th3r.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-w1th3r.release.xcconfig"; path = "Target Support Files/Pods-w1th3r/Pods-w1th3r.release.xcconfig"; sourceTree = "<group>"; };
+		7D61F779D1EB1EA88D9924BA /* Pods-w1th3r.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-w1th3r.debug.xcconfig"; path = "Target Support Files/Pods-w1th3r/Pods-w1th3r.debug.xcconfig"; sourceTree = "<group>"; };
 		821335E72401480500D85845 /* w1th3r.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = w1th3r.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		821335EA2401480500D85845 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		821335EB2401480500D85845 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -75,11 +78,12 @@
 		8213362F240148C700D85845 /* IOKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = IOKit.tbd; path = w1th3r/IOKit/IOKit.tbd; sourceTree = "<group>"; };
 		82133631240149DD00D85845 /* IOSurface_stuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOSurface_stuff.h; sourceTree = "<group>"; };
 		82133632240149DD00D85845 /* IOSurface_stuff.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = IOSurface_stuff.c; sourceTree = "<group>"; };
-		C823F9CC245A1665009D86B3 /* FdHijacker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FdHijacker.m; sourceTree = "<group>"; };
-		C823F9CD245A1665009D86B3 /* FdHijacker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FdHijacker.h; sourceTree = "<group>"; };
 		C823F9CF245A1A81009D86B3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		C823F9D1245A1A8A009D86B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C823F9D3245A1B16009D86B3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C8679CAF245B63F200215EFF /* UITextViewLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextViewLogger.h; sourceTree = "<group>"; };
+		C8679CB0245B645D00215EFF /* UITextViewLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextViewLogger.m; sourceTree = "<group>"; };
+		DAAA1BB60BC5A9D4484B1D97 /* libPods-w1th3r.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-w1th3r.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 				C823F9D8245A1C97009D86B3 /* IOKit.tbd in Frameworks */,
 				C823F9D4245A1B16009D86B3 /* UIKit.framework in Frameworks */,
 				C823F9D2245A1A8A009D86B3 /* Foundation.framework in Frameworks */,
+				3FE12AF31275DB89A1885F1F /* libPods-w1th3r.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +116,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20739CE0AB5CE77AF566A011 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7D61F779D1EB1EA88D9924BA /* Pods-w1th3r.debug.xcconfig */,
+				34841FCCF59A8FFDA5B56D5B /* Pods-w1th3r.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		821335DE2401480400D85845 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +133,7 @@
 				821336102401480600D85845 /* w1th3rUITests */,
 				821335E82401480500D85845 /* Products */,
 				8213362E240148C700D85845 /* Frameworks */,
+				20739CE0AB5CE77AF566A011 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,8 +150,6 @@
 		821335E92401480500D85845 /* w1th3r */ = {
 			isa = PBXGroup;
 			children = (
-				C823F9CD245A1665009D86B3 /* FdHijacker.h */,
-				C823F9CC245A1665009D86B3 /* FdHijacker.m */,
 				821335EA2401480500D85845 /* AppDelegate.h */,
 				821335EB2401480500D85845 /* AppDelegate.m */,
 				821335F02401480500D85845 /* ViewController.h */,
@@ -158,6 +171,8 @@
 				821335F82401480600D85845 /* LaunchScreen.storyboard */,
 				821335FB2401480600D85845 /* Info.plist */,
 				821335FC2401480600D85845 /* main.m */,
+				C8679CAF245B63F200215EFF /* UITextViewLogger.h */,
+				C8679CB0245B645D00215EFF /* UITextViewLogger.m */,
 			);
 			path = w1th3r;
 			sourceTree = "<group>";
@@ -187,6 +202,7 @@
 				C823F9D1245A1A8A009D86B3 /* Foundation.framework */,
 				C823F9CF245A1A81009D86B3 /* CoreGraphics.framework */,
 				8213362F240148C700D85845 /* IOKit.tbd */,
+				DAAA1BB60BC5A9D4484B1D97 /* libPods-w1th3r.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -198,6 +214,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 821336162401480600D85845 /* Build configuration list for PBXNativeTarget "w1th3r" */;
 			buildPhases = (
+				5CC567D18F8B92D3CFA61543 /* [CP] Check Pods Manifest.lock */,
 				821335E32401480500D85845 /* Sources */,
 				821335E42401480500D85845 /* Frameworks */,
 				821335E52401480500D85845 /* Resources */,
@@ -316,6 +333,31 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5CC567D18F8B92D3CFA61543 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-w1th3r-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		821335E32401480500D85845 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -329,8 +371,8 @@
 				8213362A2401487D00D85845 /* IOAccelerator_stuff.c in Sources */,
 				8213362B2401487D00D85845 /* offsets.m in Sources */,
 				821335FD2401480600D85845 /* main.m in Sources */,
-				C823F9CE245A1665009D86B3 /* FdHijacker.m in Sources */,
 				8213362D2401488D00D85845 /* exploit.c in Sources */,
+				C8679CB1245B645D00215EFF /* UITextViewLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,12 +539,12 @@
 		};
 		821336172401480600D85845 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D61F779D1EB1EA88D9924BA /* Pods-w1th3r.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K958TSC88P;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/w1th3r\"";
 				INFOPLIST_FILE = w1th3r/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -522,12 +564,12 @@
 		};
 		821336182401480600D85845 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34841FCCF59A8FFDA5B56D5B /* Pods-w1th3r.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K958TSC88P;
-				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/w1th3r\"";
 				INFOPLIST_FILE = w1th3r/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
