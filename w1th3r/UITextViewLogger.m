@@ -36,11 +36,10 @@
   NSAssert(self.textView != nil, @"self.textView is nil");
   
   dispatch_async(dispatch_get_main_queue(), ^(void) {
-      NSString *newText = [self.textView.text stringByAppendingString:string];
-      self.textView.text = newText;
+      [self.textView insertText:string];
       
       if (self.autoScrollsToBottom) {
-          [self.textView scrollRangeToVisible:NSMakeRange(newText.length, 0)];
+          [self.textView scrollRangeToVisible:NSMakeRange(self.textView.text.length, 0)];
       }
   });
 }
@@ -49,6 +48,7 @@
 
 - (void)logMessage:(DDLogMessage *)logMessage {
     NSString *logMsg = logMessage.message;
+    
 
     if (self->_logFormatter)
         logMsg = [self->_logFormatter formatLogMessage:logMessage];

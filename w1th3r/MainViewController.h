@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-@interface ViewController : UIViewController
+#import "UITextViewLogger.h"
+#define LOG_LEVEL_DEF ddLogLevel
+#import <CocoaLumberjack/CocoaLumberjack.h>
+@interface MainViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
 

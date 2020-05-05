@@ -1,3 +1,6 @@
+#ifndef offsets_h
+#define offsets_h
+#define LOG_LEVEL_DEF ddLogLevel
 enum kstruct_offset {
     /* struct task */
     KSTRUCT_OFFSET_TASK_LCK_MTX_TYPE,
@@ -55,3 +58,4 @@ enum kstruct_offset {
 
 int koffset(enum kstruct_offset offset);
 int init_offsets(void);
+#endif

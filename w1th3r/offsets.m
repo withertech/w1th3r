@@ -6,8 +6,8 @@
 #import <string.h>
 #import <sys/sysctl.h>
 #import <sys/utsname.h>
-
 #import "offsets.h"
+#import "UITextViewLogger.h"
 
 #define SYSTEM_VERSION_EQUAL_TO(v)                  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedSame)
 #define SYSTEM_VERSION_GREATER_THAN(v)              ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedDescending)
@@ -16,7 +16,7 @@
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
 
 int* offsets = NULL;
-
+static const DDLogLevel ddLogLevel = DDLogLevelAll;
 int kstruct_offsets_13_0[] = {
     0xb,   // KSTRUCT_OFFSET_TASK_LCK_MTX_TYPE,
     0x10,  // KSTRUCT_OFFSET_TASK_REF_COUNT,
@@ -119,7 +119,7 @@ int kstruct_offsets_12_0[] = {
 
 int koffset(enum kstruct_offset offset) {
     if (offsets == NULL) {
-        printf("[-] Please call init_offsets() prior to querying offsets\n");
+        DDLogError(@"[-] Please call init_offsets() prior to querying offsets");
         return 0;
     }
     return offsets[offset];
@@ -129,21 +129,21 @@ uint32_t create_outsize;
 
 int init_offsets() {
     if (SYSTEM_VERSION_GREATER_THAN(@"13.3")) {
-        printf("[-] iOS version too high, 13.3 or lower required\n");
+        DDLogError(@"[-] iOS version too high, 13.3 or lower required\n");
         return 1;
     }
     else if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"13.0")) {
-        printf("[i] Offsets selected for iOS 13.0 or above\n");
+        DDLogInfo(@"[i] Offsets selected for iOS 13.0 or above");
         offsets = kstruct_offsets_13_0;
         return 0;
     }
     else if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"12.0")) {
-        printf("[i] Offsets selected for iOS 12.0 or above\n");
+        DDLogInfo(@"[i] Offsets selected for iOS 12.0 or above");
         offsets = kstruct_offsets_12_0;
         return 0;
     }
     else {
-        printf("[-] iOS version too low, 13.0 or higher required\n");
+        DDLogError(@"[-] iOS version too low, 13.0 or higher required");
         return 2;
     }
 }

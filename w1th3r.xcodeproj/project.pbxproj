@@ -9,19 +9,19 @@
 /* Begin PBXBuildFile section */
 		3FE12AF31275DB89A1885F1F /* libPods-w1th3r.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DAAA1BB60BC5A9D4484B1D97 /* libPods-w1th3r.a */; };
 		821335EC2401480500D85845 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 821335EB2401480500D85845 /* AppDelegate.m */; };
-		821335F22401480500D85845 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821335F12401480500D85845 /* ViewController.m */; };
+		821335F22401480500D85845 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 821335F12401480500D85845 /* MainViewController.m */; };
 		821335F52401480500D85845 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821335F32401480500D85845 /* Main.storyboard */; };
 		821335F72401480600D85845 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 821335F62401480600D85845 /* Assets.xcassets */; };
 		821335FA2401480600D85845 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 821335F82401480600D85845 /* LaunchScreen.storyboard */; };
 		821335FD2401480600D85845 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 821335FC2401480600D85845 /* main.m */; };
 		821336072401480600D85845 /* time_wasteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 821336062401480600D85845 /* time_wasteTests.m */; };
 		821336122401480600D85845 /* time_wasteUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 821336112401480600D85845 /* time_wasteUITests.m */; };
-		821336282401487D00D85845 /* kernel_memory.c in Sources */ = {isa = PBXBuildFile; fileRef = 8213361F2401487C00D85845 /* kernel_memory.c */; };
-		821336292401487D00D85845 /* exploit_utilities.c in Sources */ = {isa = PBXBuildFile; fileRef = 821336202401487C00D85845 /* exploit_utilities.c */; };
-		8213362A2401487D00D85845 /* IOAccelerator_stuff.c in Sources */ = {isa = PBXBuildFile; fileRef = 821336212401487C00D85845 /* IOAccelerator_stuff.c */; };
+		821336282401487D00D85845 /* kernel_memory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8213361F2401487C00D85845 /* kernel_memory.m */; };
+		821336292401487D00D85845 /* exploit_utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 821336202401487C00D85845 /* exploit_utilities.m */; };
+		8213362A2401487D00D85845 /* IOAccelerator_stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 821336212401487C00D85845 /* IOAccelerator_stuff.m */; };
 		8213362B2401487D00D85845 /* offsets.m in Sources */ = {isa = PBXBuildFile; fileRef = 821336272401487C00D85845 /* offsets.m */; };
 		8213362D2401488D00D85845 /* exploit.m in Sources */ = {isa = PBXBuildFile; fileRef = 8213362C2401488D00D85845 /* exploit.m */; };
-		82133633240149DD00D85845 /* IOSurface_stuff.c in Sources */ = {isa = PBXBuildFile; fileRef = 82133632240149DD00D85845 /* IOSurface_stuff.c */; };
+		82133633240149DD00D85845 /* IOSurface_stuff.m in Sources */ = {isa = PBXBuildFile; fileRef = 82133632240149DD00D85845 /* IOSurface_stuff.m */; };
 		C823F9D8245A1C97009D86B3 /* IOKit.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8213362F240148C700D85845 /* IOKit.tbd */; };
 		C8679CB1245B645D00215EFF /* UITextViewLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C8679CB0245B645D00215EFF /* UITextViewLogger.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		C8D5C8C9245BB74400E54CCA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8D5C8C8245BB74400E54CCA /* Foundation.framework */; };
@@ -52,8 +52,8 @@
 		821335E72401480500D85845 /* w1th3r.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = w1th3r.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		821335EA2401480500D85845 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		821335EB2401480500D85845 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		821335F02401480500D85845 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		821335F12401480500D85845 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		821335F02401480500D85845 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		821335F12401480500D85845 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		821335F42401480500D85845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		821335F62401480600D85845 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		821335F92401480600D85845 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,9 +65,9 @@
 		8213360D2401480600D85845 /* w1th3rUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = w1th3rUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		821336112401480600D85845 /* time_wasteUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = time_wasteUITests.m; sourceTree = "<group>"; };
 		821336132401480600D85845 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8213361F2401487C00D85845 /* kernel_memory.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = kernel_memory.c; sourceTree = "<group>"; };
-		821336202401487C00D85845 /* exploit_utilities.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = exploit_utilities.c; sourceTree = "<group>"; };
-		821336212401487C00D85845 /* IOAccelerator_stuff.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IOAccelerator_stuff.c; sourceTree = "<group>"; };
+		8213361F2401487C00D85845 /* kernel_memory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kernel_memory.m; sourceTree = "<group>"; };
+		821336202401487C00D85845 /* exploit_utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = exploit_utilities.m; sourceTree = "<group>"; };
+		821336212401487C00D85845 /* IOAccelerator_stuff.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOAccelerator_stuff.m; sourceTree = "<group>"; };
 		821336222401487C00D85845 /* kernel_memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kernel_memory.h; sourceTree = "<group>"; };
 		821336232401487C00D85845 /* IOAccelerator_stuff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOAccelerator_stuff.h; sourceTree = "<group>"; };
 		821336242401487C00D85845 /* offsets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = offsets.h; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		8213362C2401488D00D85845 /* exploit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = exploit.m; sourceTree = "<group>"; };
 		8213362F240148C700D85845 /* IOKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = IOKit.tbd; path = w1th3r/IOKit/IOKit.tbd; sourceTree = "<group>"; };
 		82133631240149DD00D85845 /* IOSurface_stuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOSurface_stuff.h; sourceTree = "<group>"; };
-		82133632240149DD00D85845 /* IOSurface_stuff.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = IOSurface_stuff.c; sourceTree = "<group>"; };
+		82133632240149DD00D85845 /* IOSurface_stuff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOSurface_stuff.m; sourceTree = "<group>"; };
 		C8679CAF245B63F200215EFF /* UITextViewLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextViewLogger.h; sourceTree = "<group>"; };
 		C8679CB0245B645D00215EFF /* UITextViewLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextViewLogger.m; sourceTree = "<group>"; };
 		C8D5C8C8245BB74400E54CCA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -154,17 +154,17 @@
 			children = (
 				821335EA2401480500D85845 /* AppDelegate.h */,
 				821335EB2401480500D85845 /* AppDelegate.m */,
-				821335F02401480500D85845 /* ViewController.h */,
-				821335F12401480500D85845 /* ViewController.m */,
-				821336202401487C00D85845 /* exploit_utilities.c */,
+				821335F02401480500D85845 /* MainViewController.h */,
+				821335F12401480500D85845 /* MainViewController.m */,
+				821336202401487C00D85845 /* exploit_utilities.m */,
 				821336262401487C00D85845 /* exploit_utilities.h */,
 				8213362C2401488D00D85845 /* exploit.m */,
 				821336252401487C00D85845 /* exploit.h */,
 				82133631240149DD00D85845 /* IOSurface_stuff.h */,
-				82133632240149DD00D85845 /* IOSurface_stuff.c */,
-				821336212401487C00D85845 /* IOAccelerator_stuff.c */,
+				82133632240149DD00D85845 /* IOSurface_stuff.m */,
+				821336212401487C00D85845 /* IOAccelerator_stuff.m */,
 				821336232401487C00D85845 /* IOAccelerator_stuff.h */,
-				8213361F2401487C00D85845 /* kernel_memory.c */,
+				8213361F2401487C00D85845 /* kernel_memory.m */,
 				821336222401487C00D85845 /* kernel_memory.h */,
 				821336242401487C00D85845 /* offsets.h */,
 				821336272401487C00D85845 /* offsets.m */,
@@ -365,12 +365,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				821336292401487D00D85845 /* exploit_utilities.c in Sources */,
-				821335F22401480500D85845 /* ViewController.m in Sources */,
-				82133633240149DD00D85845 /* IOSurface_stuff.c in Sources */,
-				821336282401487D00D85845 /* kernel_memory.c in Sources */,
+				821336292401487D00D85845 /* exploit_utilities.m in Sources */,
+				821335F22401480500D85845 /* MainViewController.m in Sources */,
+				82133633240149DD00D85845 /* IOSurface_stuff.m in Sources */,
+				821336282401487D00D85845 /* kernel_memory.m in Sources */,
 				821335EC2401480500D85845 /* AppDelegate.m in Sources */,
-				8213362A2401487D00D85845 /* IOAccelerator_stuff.c in Sources */,
+				8213362A2401487D00D85845 /* IOAccelerator_stuff.m in Sources */,
 				8213362B2401487D00D85845 /* offsets.m in Sources */,
 				821335FD2401480600D85845 /* main.m in Sources */,
 				8213362D2401488D00D85845 /* exploit.m in Sources */,

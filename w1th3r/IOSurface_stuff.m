@@ -7,30 +7,32 @@
 //
 
 #import "IOSurface_stuff.h"
+#import "UITextViewLogger.h"
 
 uint32_t pagesize;
 io_connect_t IOSurfaceRoot;
 io_service_t IOSurfaceRootUserClient;
 uint32_t IOSurface_ID;
+static const DDLogLevel ddLogLevel = DDLogLevelAll;
 
 int init_IOSurface() {
     kern_return_t ret = _host_page_size(mach_host_self(), (vm_size_t*)&pagesize);
     if (ret) {
-        printf("[-] Failed to get page size! 0x%x (%s)\n", ret, mach_error_string(ret));
+        DDLogError(@"[-] Failed to get page size! 0x%x (%s)", ret, mach_error_string(ret));
         return ret;
     }
     
-    printf("[i] page size: 0x%x\n", pagesize);
+    DDLogInfo(@"[i] page size: 0x%x", pagesize);
     
     IOSurfaceRoot = IOServiceGetMatchingService(kIOMasterPortDefault, IOServiceMatching("IOSurfaceRoot"));
     if (!MACH_PORT_VALID(IOSurfaceRoot)) {
-        printf("[-] Failed to find IOSurfaceRoot service\n");
+        DDLogError(@"[-] Failed to find IOSurfaceRoot service");
         return KERN_FAILURE;
     }
     
     ret = IOServiceOpen(IOSurfaceRoot, mach_task_self(), 0, &IOSurfaceRootUserClient);
     if (ret || !MACH_PORT_VALID(IOSurfaceRootUserClient)) {
-        printf("[-] Failed to open IOSurfaceRootUserClient: 0x%x (%s)\n", ret, mach_error_string(ret));
+        DDLogError(@"[-] Failed to open IOSurfaceRootUserClient: 0x%x (%s)", ret, mach_error_string(ret));
         return ret;
     }
     
@@ -43,7 +45,7 @@ int init_IOSurface() {
     
     ret = IOConnectCallMethod(IOSurfaceRootUserClient, IOSurfaceRootUserClient_create_surface_selector, NULL, 0, &create_args, sizeof(create_args), NULL, NULL, &lock_result, &lock_result_size);
     if (ret) {
-        printf("[-] Failed to create IOSurfaceClient: 0x%x (%s)\n", ret, mach_error_string(ret));
+        DDLogError(@"[-] Failed to create IOSurfaceClient: 0x%x (%s)", ret, mach_error_string(ret));
         return ret;
     }
     
@@ -58,7 +60,7 @@ int IOSurface_setValue(struct IOSurfaceValueArgs *args, size_t args_size) {
     
     kern_return_t ret = IOConnectCallMethod(IOSurfaceRootUserClient, IOSurfaceRootUserClient_set_value_selector, NULL, 0, args, args_size, NULL, NULL, &result, &result_size);
     if (ret) {
-        printf("[-][IOSurface] Failed to set value: 0x%x (%s)\n", ret, mach_error_string(ret));
+        DDLogError(@"[-][IOSurface] Failed to set value: 0x%x (%s)", ret, mach_error_string(ret));
         return ret;
     }
     return 0;
@@ -67,7 +69,7 @@ int IOSurface_setValue(struct IOSurfaceValueArgs *args, size_t args_size) {
 int IOSurface_getValue(struct IOSurfaceValueArgs *args, int args_size, struct IOSurfaceValueArgs *output, size_t *out_size) {
     kern_return_t ret = IOConnectCallMethod(IOSurfaceRootUserClient, IOSurfaceRootUserClient_get_value_selector, NULL, 0, args, args_size, NULL, NULL, output, out_size);
     if (ret) {
-        printf("[-][IOSurface] Failed to get value: 0x%x (%s)\n", ret, mach_error_string(ret));
+        DDLogError(@"[-][IOSurface] Failed to get value: 0x%x (%s)", ret, mach_error_string(ret));
         return ret;
     }
     return 0;
@@ -79,7 +81,7 @@ int IOSurface_removeValue(struct IOSurfaceValueArgs *args, size_t args_size) {
     
     kern_return_t ret = IOConnectCallMethod(IOSurfaceRootUserClient, IOSurfaceRootUserClient_remove_value_selector, NULL, 0, args, args_size, NULL, NULL, &result, &result_size);
     if (ret) {
-        printf("[-][IOSurface] Failed to remove value: 0x%x (%s)\n", ret, mach_error_string(ret));
+        DDLogError(@"[-][IOSurface] Failed to remove value: 0x%x (%s)", ret, mach_error_string(ret));
         return ret;
     }
     return 0;
@@ -96,7 +98,7 @@ int IOSurface_remove_property(uint32_t key) {
 
 int IOSurface_kalloc(void *data, uint32_t size, uint32_t kalloc_key) {
     if (size - 1 > 0x00ffffff) {
-        printf("[-][IOSurface] Size too big for OSUnserializeBinary\n");
+        DDLogError(@"[-][IOSurface] Size too big for OSUnserializeBinary");
         return KERN_FAILURE;
     }
     
@@ -122,11 +124,11 @@ int IOSurface_kalloc(void *data, uint32_t size, uint32_t kalloc_key) {
 
 int IOSurface_kalloc_spray(void *data, uint32_t size, int count, uint32_t kalloc_key) {
     if (size - 1 > 0x00ffffff) {
-        printf("[-][IOSurface] Size too big for OSUnserializeBinary\n");
+        DDLogError(@"[-][IOSurface] Size too big for OSUnserializeBinary");
         return KERN_FAILURE;
     }
     if (count > 0x00ffffff) {
-        printf("[-][IOSurface] Count too big for OSUnserializeBinary\n");
+        DDLogError(@"[-][IOSurface] Count too big for OSUnserializeBinary");
         return KERN_FAILURE;
     }
     
@@ -157,7 +159,7 @@ int IOSurface_empty_kalloc(uint32_t size, uint32_t kalloc_key) {
     uint32_t capacity = size / 16;
     
     if (capacity > 0x00ffffff) {
-        printf("[-][IOSurface] Size too big for OSUnserializeBinary\n");
+        DDLogError(@"[-][IOSurface] Size too big for OSUnserializeBinary");
         return KERN_FAILURE;
     }
     
@@ -184,11 +186,11 @@ int IOSurface_empty_kalloc(uint32_t size, uint32_t kalloc_key) {
 
 int IOSurface_kmem_alloc(void *data, uint32_t size, uint32_t kalloc_key) {
     if (size < pagesize) {
-        printf("[-][IOSurface] Size too small for kmem_alloc\n");
+        DDLogError(@"[-][IOSurface] Size too small for kmem_alloc");
         return KERN_FAILURE;
     }
     if (size > 0x00ffffff) {
-        printf("[-][IOSurface] Size too big for OSUnserializeBinary\n");
+        DDLogError(@"[-][IOSurface] Size too big for OSUnserializeBinary");
         return KERN_FAILURE;
     }
     
@@ -214,15 +216,15 @@ int IOSurface_kmem_alloc(void *data, uint32_t size, uint32_t kalloc_key) {
 
 int IOSurface_kmem_alloc_spray(void *data, uint32_t size, int count, uint32_t kalloc_key) {
     if (size < pagesize) {
-        printf("[-][IOSurface] Size too small for kmem_alloc\n");
+        DDLogError(@"[-][IOSurface] Size too small for kmem_alloc");
         return KERN_FAILURE;
     }
     if (size > 0x00ffffff) {
-        printf("[-][IOSurface] Size too big for OSUnserializeBinary\n");
+        DDLogError(@"[-][IOSurface] Size too big for OSUnserializeBinary");
         return KERN_FAILURE;
     }
     if (count > 0x00ffffff) {
-        printf("[-][IOSurface] Size too big for OSUnserializeBinary\n");
+        DDLogError(@"[-][IOSurface] Size too big for OSUnserializeBinary");
         return KERN_FAILURE;
     }
     

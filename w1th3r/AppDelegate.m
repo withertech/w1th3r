@@ -8,9 +8,6 @@
 
 #import "AppDelegate.h"
 #import "exploit.h"
-#import "UITextViewLogger.h"
-#import "ViewController.h"
-static const DDLogLevel ddLogLevel = DDLogLevelAll;
 @interface AppDelegate ()
 
 @end
@@ -19,13 +16,6 @@ static const DDLogLevel ddLogLevel = DDLogLevelAll;
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    [DDLog addLogger:[DDTTYLogger sharedInstance]];
-    UITextViewLogger *textViewLogger = [UITextViewLogger new];
-    textViewLogger.autoScrollsToBottom = YES;
-    [DDLog addLogger:textViewLogger];
-    ViewController *viewController = [ViewController alloc];
-    textViewLogger.textView = viewController.textView;
     return YES;
 }
-
 @end

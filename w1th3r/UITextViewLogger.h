@@ -5,7 +5,7 @@
 //  Copyright (c) 2012–2013. All rights reserved.
 //
 
-#import "DDLog.h"
+#import <CocoaLumberjack/CocoaLumberjack.h>
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 /*

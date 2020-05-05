@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainViewController.h"
+#import "UITextViewLogger.h"
 #define LOG_LEVEL_DEF ddLogLevel
 #import <CocoaLumberjack/CocoaLumberjack.h>
 
@@ -15,4 +17,3 @@
 @property (strong, nonatomic) UIWindow *window;
 
 @end
-
