@@ -78,6 +78,7 @@
 		8213362F240148C700D85845 /* IOKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = IOKit.tbd; path = w1th3r/IOKit/IOKit.tbd; sourceTree = "<group>"; };
 		82133631240149DD00D85845 /* IOSurface_stuff.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IOSurface_stuff.h; sourceTree = "<group>"; };
 		82133632240149DD00D85845 /* IOSurface_stuff.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IOSurface_stuff.m; sourceTree = "<group>"; };
+		C8381B742462565600A9D881 /* w1th3r-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "w1th3r-Prefix.pch"; sourceTree = "<group>"; };
 		C8679CAF245B63F200215EFF /* UITextViewLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UITextViewLogger.h; sourceTree = "<group>"; };
 		C8679CB0245B645D00215EFF /* UITextViewLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UITextViewLogger.m; sourceTree = "<group>"; };
 		C8D5C8C8245BB74400E54CCA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -160,8 +161,9 @@
 				821336262401487C00D85845 /* exploit_utilities.h */,
 				8213362C2401488D00D85845 /* exploit.m */,
 				821336252401487C00D85845 /* exploit.h */,
-				82133631240149DD00D85845 /* IOSurface_stuff.h */,
+				C8381B742462565600A9D881 /* w1th3r-Prefix.pch */,
 				82133632240149DD00D85845 /* IOSurface_stuff.m */,
+				82133631240149DD00D85845 /* IOSurface_stuff.h */,
 				821336212401487C00D85845 /* IOAccelerator_stuff.m */,
 				821336232401487C00D85845 /* IOAccelerator_stuff.h */,
 				8213361F2401487C00D85845 /* kernel_memory.m */,
@@ -547,6 +549,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K958TSC88P;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/w1th3r/w1th3r-Prefix.pch";
 				INFOPLIST_FILE = w1th3r/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -557,6 +560,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/w1th3r/IOKit",
 				);
+				MARKETING_VERSION = a1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.withertech.w1th3r;
 				PRODUCT_NAME = w1th3r;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -572,6 +576,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K958TSC88P;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/w1th3r/w1th3r-Prefix.pch";
 				INFOPLIST_FILE = w1th3r/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -582,6 +587,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/w1th3r/IOKit",
 				);
+				MARKETING_VERSION = a1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.withertech.w1th3r;
 				PRODUCT_NAME = w1th3r;
 				TARGETED_DEVICE_FAMILY = "1,2";

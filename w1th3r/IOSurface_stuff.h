@@ -15,8 +15,6 @@
 
 #import <IOKit/IOKitLib.h>
 #import <mach/mach.h>
-#define LOG_LEVEL_DEF ddLogLevel
-#import <CocoaLumberjack/CocoaLumberjack.h>
 #import "offsets.h"
 
 #define IOSurfaceRootUserClient_create_surface_selector 6

@@ -7,7 +7,7 @@
 //
 
 #import "kernel_memory.h"
-
+static const DDLogLevel ddLogLevel = DDLogLevelAll;
 static mach_port_t tfpzero;
 static uint64_t task_self;
 
@@ -36,7 +36,7 @@ size_t kread(uint64_t where, void *p, size_t size) {
         }
         rv = mach_vm_read_overwrite(tfpzero, where + offset, chunk, (mach_vm_address_t)p + offset, &sz);
         if (rv || sz == 0) {
-            printf("[-] error on kread(0x%016llx)\n", where);
+            DDLogError(@"[-] error on kread(0x%016llx)", where);
             break;
         }
         offset += sz;
@@ -66,7 +66,7 @@ size_t kwrite(uint64_t where, const void *p, size_t size) {
         }
         rv = mach_vm_write(tfpzero, where + offset, (mach_vm_offset_t)p + offset, (int)chunk);
         if (rv) {
-            printf("[-] error on kwrite(0x%016llx)\n", where);
+            DDLogError(@"[-] error on kwrite(0x%016llx)", where);
             break;
         }
         offset += chunk;
