@@ -41,7 +41,7 @@ int init_IOSurface() {
     };
     
     struct IOSurfaceLockResult lock_result;
-    size_t lock_result_size = koffset(IOSURFACE_CREATE_OUTSIZE);
+    size_t lock_result_size = _koffset(IOSURFACE_CREATE_OUTSIZE);
     
     ret = IOConnectCallMethod(IOSurfaceRootUserClient, IOSurfaceRootUserClient_create_surface_selector, NULL, 0, &create_args, sizeof(create_args), NULL, NULL, &lock_result, &lock_result_size);
     if (ret) {

@@ -13,6 +13,7 @@
 #import <CocoaLumberjack/CocoaLumberjack.h>
 @interface MainViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextView *textView;
+@property (weak, nonatomic) IBOutlet UILabel *jailbreakIndicator;
 
 
 @end

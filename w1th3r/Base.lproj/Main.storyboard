@@ -33,33 +33,45 @@
                                     <action selector="Jailbreak:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Ag-nf-LRA"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2I-Vb-5mI">
-                                <rect key="frame" x="20" y="0.0" width="335" height="593"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e2I-Vb-5mI">
+                                <rect key="frame" x="20" y="80" width="335" height="507"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ar-Da-wJG">
+                                <rect key="frame" x="20" y="20" width="335" height="40"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="e2I-Vb-5mI" firstAttribute="top" secondItem="SW0-dj-e4q" secondAttribute="top" id="6ed-Lj-m4E"/>
                             <constraint firstItem="F1P-jv-D37" firstAttribute="leading" secondItem="SW0-dj-e4q" secondAttribute="leading" constant="20" id="6vt-06-0BU"/>
+                            <constraint firstItem="2Ar-Da-wJG" firstAttribute="leading" secondItem="SW0-dj-e4q" secondAttribute="leading" constant="20" id="9UP-jS-4ri"/>
                             <constraint firstItem="SW0-dj-e4q" firstAttribute="trailing" secondItem="F1P-jv-D37" secondAttribute="trailing" constant="20" id="E2A-q0-qnl"/>
                             <constraint firstItem="e2I-Vb-5mI" firstAttribute="leading" secondItem="SW0-dj-e4q" secondAttribute="leading" constant="20" id="Kaf-vL-Yuo"/>
+                            <constraint firstItem="SW0-dj-e4q" firstAttribute="trailing" secondItem="2Ar-Da-wJG" secondAttribute="trailing" constant="20" id="QOl-Ci-yah"/>
                             <constraint firstAttribute="bottom" secondItem="F1P-jv-D37" secondAttribute="bottom" constant="20" id="SLm-2H-F6o"/>
-                            <constraint firstItem="F1P-jv-D37" firstAttribute="top" secondItem="e2I-Vb-5mI" secondAttribute="bottom" constant="14" id="qYg-of-SWS"/>
+                            <constraint firstItem="F1P-jv-D37" firstAttribute="top" secondItem="e2I-Vb-5mI" secondAttribute="bottom" constant="20" id="f2W-ph-Kwh"/>
+                            <constraint firstItem="e2I-Vb-5mI" firstAttribute="top" secondItem="2Ar-Da-wJG" secondAttribute="bottom" constant="20" id="goZ-tg-h1l"/>
+                            <constraint firstItem="2Ar-Da-wJG" firstAttribute="top" secondItem="SW0-dj-e4q" secondAttribute="top" constant="20" id="rgx-ZL-lo6"/>
                             <constraint firstItem="SW0-dj-e4q" firstAttribute="trailing" secondItem="e2I-Vb-5mI" secondAttribute="trailing" constant="20" id="xQg-7b-tBk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SW0-dj-e4q"/>
                     </view>
                     <connections>
+                        <outlet property="jailbreakIndicator" destination="2Ar-Da-wJG" id="5SU-Mw-Mbb"/>
                         <outlet property="textView" destination="e2I-Vb-5mI" id="onA-RV-eEI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="139"/>
+            <point key="canvasLocation" x="132" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>

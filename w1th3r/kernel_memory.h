@@ -39,7 +39,7 @@ uint64_t kalloc(vm_size_t size);
 int kstrcmp(uint64_t string1, uint64_t string2);
 int kstrcmp_u(uint64_t string1, char *string2);
 unsigned long kstrlen(uint64_t string);
-
+uint64_t findOurselves();
 uint64_t find_port(mach_port_name_t port);
 
 #endif /* kernel_memory_h */
